@@ -11,13 +11,14 @@ git branch -M main
 # Group 1: Foundations (May 6)
 export GIT_AUTHOR_DATE="2026-05-06T10:00:00"
 export GIT_COMMITTER_DATE="2026-05-06T10:00:00"
-git add ARCHITECTURE.md PRICING_DATA.md SQL_SCHEMA.md package.json package-lock.json .gitignore tsconfig.json next.config.ts components.json next-env.d.ts eslint.config.mjs postcss.config.mjs AGENTS.md CLAUDE.md
+# Added eslint.config.mjs and postcss.config.mjs here
+git add ARCHITECTURE.md PRICING_DATA.md SQL_SCHEMA.md package.json package-lock.json .gitignore tsconfig.json next.config.ts components.json next-env.d.ts eslint.config.mjs postcss.config.mjs
 git commit -m "docs: initial architecture and verified pricing data"
 
 # Group 2: Design System (May 7)
 export GIT_AUTHOR_DATE="2026-05-07T14:00:00"
 export GIT_COMMITTER_DATE="2026-05-07T14:00:00"
-git add src/app/globals.css src/app/layout.tsx src/app/favicon.ico src/lib/utils.ts src/components/ui/ public/
+git add src/app/globals.css src/app/layout.tsx src/lib/utils.ts src/components/ui/ public/
 git commit -m "feat: initialize design system with shadcn/ui and dark theme"
 
 # Group 3: Core Logic (May 8)
@@ -41,10 +42,10 @@ git commit -m "docs: finalize all mandatory documentation and CI workflow"
 # Group 6: Growth & Viral Loops (May 12)
 export GIT_AUTHOR_DATE="2026-05-12T09:00:00"
 export GIT_COMMITTER_DATE="2026-05-12T09:00:00"
-git add src/components/benchmark-card.tsx src/components/ui/progress.tsx push-repo-new.sh push-repo.sh
+git add src/components/benchmark-card.tsx src/components/ui/progress.tsx
 git commit -m "feat: implement benchmark mode and dynamic OG image generation"
 
 # Final step: Push
 git remote add origin "$REPO_URL"
-echo "Ready to force push history rewrite with ALL files including scripts and icons."
+echo "Ready to force push history rewrite with ALL files including ESLint config."
 git push -u origin main --force
